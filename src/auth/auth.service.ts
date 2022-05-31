@@ -3,7 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { UserService } from 'src/user/user.service';
 import * as argon2 from 'argon2';
 import { User } from '../user/user.entity';
-import { UserDto } from '../user/user.dto';
+import { UserDto } from '../user/dto/user.dto';
 
 @Injectable()
 export class AuthService {
