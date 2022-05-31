@@ -16,6 +16,9 @@ $ npm install
 # before first run
 $ npm run migration:run
 
+# valid ormconfig.ts file is also required
+# you can use ormconfig.example.ts as a template
+
 # development
 $ npm run start
 
