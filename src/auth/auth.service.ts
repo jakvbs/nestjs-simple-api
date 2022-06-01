@@ -23,7 +23,7 @@ export class AuthService {
     return null;
   }
 
-  async register(dto: UserDto): Promise<any> {
+  async register(dto: UserDto) {
     const { email } = dto;
     const user = await this.usersService.findByEmail(email);
 

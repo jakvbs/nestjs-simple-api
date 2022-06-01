@@ -8,7 +8,7 @@ export class WeatherController {
 
   @UseGuards(JwtAuthGuard)
   @Get('get')
-  getWeather(): any {
+  getWeather(): Promise<any> {
     return this.weatherService.getWeather();
   }
 }

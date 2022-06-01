@@ -24,7 +24,7 @@ export class WeatherService implements OnModuleInit {
     }
   }
 
-  async getWeather(): Promise<string> {
+  async getWeather(): Promise<any> {
     return this.cacheManager.get('weather');
   }
 

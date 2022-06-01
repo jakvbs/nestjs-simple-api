@@ -32,7 +32,7 @@ export class UserService {
 
     const hashedPassword = await argon2.hash(dto.password);
 
-    return await this.userRepository.save({
+    return this.userRepository.save({
       ...dto,
       password: hashedPassword,
     });

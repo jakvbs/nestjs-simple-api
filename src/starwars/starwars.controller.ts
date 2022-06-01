@@ -24,17 +24,12 @@ export class StarwarsController {
   @Get('getfiltered')
   @UsePipes(
     new ValidationPipe({
-      transform: true,
       whitelist: true,
-      transformOptions: {
-        enableImplicitConversion: true,
-      },
     }),
   )
   getFilteredCharacters(
     @Query() filterDto: GetStarwarsFilterDto,
   ): Promise<StarWars[]> {
-    console.log({ filterDto });
     return this.starwarsService.getFilteredCharacters(filterDto);
   }
 }
